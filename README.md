@@ -92,7 +92,7 @@ cuartosvacios/
 
 ---
 
-## 🎨 Rediseño del frontend
+## 🎨 Diseño del frontend
 
 El rediseño de CuartosVacios.com busca ofrecer una interfaz moderna, intuitiva y adaptable a diferentes dispositivos, manteniendo la compatibilidad con el backend existente.
 
@@ -106,6 +106,62 @@ El rediseño de CuartosVacios.com busca ofrecer una interfaz moderna, intuitiva 
 - **Cómo rentar:** explicación visual del proceso de alquiler en tres pasos.
 - **Beneficios:** habitaciones verificadas, zonas de atención, precios y atención personalizada.
 - **Footer:** información corporativa, navegación, contacto y redes sociales.
+
+---
+
+## 🖥️ Galería del proyecto
+
+Conoce las principales interfaces y funcionalidades de **CuartosVacios.com – Soraya Rooms**, plataforma web orientada a la publicación, búsqueda y alquiler de habitaciones en New York, USA.
+
+### 🏠 Página principal
+
+Vista general del portal, encabezado de navegación y slider promocional.
+
+![Página principal](docs/screenshots/home.png)
+
+![Header y slider](docs/screenshots/header_slider.png)
+
+### 🛏️ Habitaciones disponibles
+
+Presentación de las habitaciones, información de precios, ubicación y opciones de consulta.
+
+![Tarjetas de habitaciones](docs/screenshots/tarjeta_cuartos.png)
+
+### ❤️ Habitaciones favoritas
+
+Interfaz para consultar las habitaciones guardadas por los usuarios.
+
+![Habitaciones favoritas](docs/screenshots/cuartos_favoritos.png)
+
+### 📋 Detalle de habitación
+
+Visualización de la información y características de una habitación seleccionada.
+
+![Detalle de habitación](docs/screenshots/detalles_cuarto.png)
+
+### 📝 Registro de habitaciones
+
+Formulario para registrar habitaciones disponibles en la plataforma.
+
+![Registro de habitación](docs/screenshots/registrar_cuarto_disponible.png)
+
+### 📩 Contacto y comunicación
+
+Formulario de contacto y herramientas de comunicación con los usuarios.
+
+![Formulario de contacto](docs/screenshots/contacto.png)
+
+![Consultas por WhatsApp](docs/screenshots/consultas_wasap.png)
+
+### 🎥 Videos de habitaciones
+
+Listado de videos y vista previa de contenido audiovisual integrado con YouTube.
+
+![Listado de videos](docs/screenshots/listado_videos.png)
+
+![Vista previa de YouTube](docs/screenshots/vista_previa_youtube.png)
+
+---
 
 ### Diseño responsive
 
