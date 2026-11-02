@@ -1,0 +1,490 @@
+.video-grid.front-page {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0em 2em;
+}
+
+ul.video-list {
+  display: flexbox;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+li.video {
+  flex-grow: 1;
+  position: relative;
+  ooverflow: hidden;
+  width: 33.333333333%;
+  width: -webkit-calc(100% / 3);
+  width: calc(100% / 3);
+  border: solid 0.1em transparent;
+}
+li.video a {
+  outline: none;
+}
+li.video:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0);
+  transition: background-color 0.15s;
+}
+li.video figure {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+/* BADGE BASE */
+li.video figure .badge {
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 3px 7px;
+  border-radius: 4px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+/* NUEVO */
+li.video figure .badge-nuevo {
+  background: #00c853;
+  color: #fff;
+}
+
+/* HOT */
+li.video figure .badge-hot {
+  background: #ff1744;
+  color: #fff;
+}
+
+/* VIP */
+li.video figure .badge-vip {
+  background: linear-gradient(135deg, #ffd700, #ffb300);
+  color: #000;
+}
+
+/* TITULO ARRIBA — SIEMPRE VISIBLE, SIN ANIMACIÓN */
+li.video figure .top-title {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  padding: 0.6rem 0.8rem;
+  background: rgba(20, 20, 20, 0.75);
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 400;
+  z-index: 3;
+
+  /* 🔥 FLEX para alinear izquierda y derecha */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  opacity: 1 !important;
+  transform: none !important;
+  transition: none !important;
+}
+
+/* Texto izquierdo */
+li.video figure .top-title .title-left {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Texto derecho (máx 20 letras aprox) */
+li.video figure .top-title .title-right {
+  font-size: 0.75rem;
+  font-weight: 500;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 2px 6px;
+  border-radius: 3px;
+  white-space: nowrap;
+}
+
+/* TITULO ABAJO — CORRECCIÓN DE ALINEACIÓN */
+li.video figure .bottom-title {
+  position: absolute;
+  bottom: 0;
+  left: 0; /* Forzar inicio a la izquierda */
+  width: 100%;
+  box-sizing: border-box; /* 🔥 IMPORTANTE: para que el padding no rompa el ancho */
+  padding: 0.5rem 0.8rem;
+  background: rgba(255, 0, 0, 0.7); /* Un poco más sólido para legibilidad */
+  color: #fff;
+  z-index: 5;
+
+  /* FLEXBOX */
+  display: flex !important;
+  flex-direction: row; /* Asegura que sea una fila */
+  justify-content: space-between;
+  align-items: center;
+
+  /* Eliminar cualquier interferencia de animaciones previas */
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+/* Estilo del texto izquierdo para que no se amontone */
+.bottom-left {
+  flex: 1; /* Toma todo el espacio disponible */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: left;
+  font-size: 0.85rem;
+}
+
+/* Contenedor del Botón (Derecha) */
+.bottom-right {
+  flex-shrink: 0; /* 🔥 Prohibido encogerse, siempre mantiene su tamaño */
+  margin-left: 10px; /* Espacio mínimo entre texto y botón */
+  display: block;
+}
+
+/* ESTILO DEL BOTÓN "VER VIDEO" */
+/* El botón propiamente */
+.btn-ver-video {
+  background: #fff;
+  color: #ff0000;
+  padding: 3px 8px; /* Un poquito más de aire vertical */
+  border-radius: 4px;
+  font-size: 0.7rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  display: inline-block; /* Asegura que se comporte como botón */
+}
+
+.btn-ver-video:hover {
+  background: #eeeeee;
+}
+
+/* Eliminar los efectos hover */
+li.video:hover figure .bottom-title {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+li.video figure img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    opacity: 1;                    /* ← Visible siempre */
+    transform: scale(1);           /* ← Tamaño normal */
+    transition: all 0.3s ease;
+}
+
+li.video figure figcaption {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 200;
+  padding: 1rem;
+  transform: translateY(0);
+  opacity: 1;
+  transition: all 0.2s;
+}
+
+li.video:hover figure img {
+    opacity: 0.8;                  /* ← Ligera transparencia en hover */
+    transform: scale(1.05);        /* ← Ligero zoom en hover */
+}
+
+li.video:hover figure figcaption {
+  opacity: 0;
+  transform: translateY(50%);
+}
+li.video:hover:before {
+  background-color: rgba(0, 0, 0, 00);
+}
+
+/* 🔥 FORZAR top-title ARRIBA */
+li.video figure .top-title {
+  top: 0 !important;
+  bottom: auto !important;
+  left: 0;
+}
+
+@media screen and (max-width: 800px) {
+  li.video {
+    width: 50%;
+    width: -webkit-calc(100% / 2);
+    width: calc(100% / 2);
+  }
+}
+@media screen and (max-width: 640px) {
+  li.video {
+    width: 100%;
+  }
+}
+
+.pagination .page-item .page-link {
+  border-radius: 50px !important;
+  margin: 0 5px;
+  padding: 8px 16px;
+  color: #555;
+  border: 1px solid #ddd;
+}
+
+.pagination .page-item.active .page-link {
+  background-color: #28a745;
+  border-color: #28a745;
+  color: #fff;
+}
+
+.pagination .page-link:hover {
+  background-color: #f1f1f1;
+}
+
+/* Contenedor principal con fondo sutil */
+.premium-section {
+  background: linear-gradient(180deg, #ffffff 0%, #f8f9fa 100%);
+  padding: 60px 0;
+}
+
+/* Tarjeta Premium Estilo "Vibe" */
+.premium-card {
+  border: none !important;
+  border-radius: 24px !important;
+  background: #fff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  overflow: visible; /* Para que los badges sobresalgan */
+}
+
+.premium-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 20px 40px rgba(255, 0, 80, 0.15);
+}
+
+/* Badge de Llamar Estilo TikTok (Flotante) */
+.badge-call-float {
+  position: absolute;
+  top: -15px;
+  right: 20px;
+  background: linear-gradient(90deg, #ff0050, #ff0081);
+  color: white;
+  padding: 8px 20px;
+  border-radius: 50px;
+  font-weight: 800;
+  font-size: 13px;
+  letter-spacing: 1px;
+  box-shadow: 0 8px 15px rgba(255, 0, 80, 0.3);
+  z-index: 10;
+  text-transform: uppercase;
+}
+
+/* Etiquetas de Inquilino y Periodo */
+.tag-custom {
+  padding: 6px 16px;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.tag-tenant {
+  background: #e7f9ed;
+  color: #28a745;
+  border: 1px solid #d1f2db;
+}
+.tag-period {
+  background: #e8f2ff;
+  color: #007bff;
+  border: 1px solid #d0e3ff;
+}
+
+/* Contenedor de Precios Glassmorphism */
+.price-box-modern {
+  background: #fdfdfd;
+  border: 2px solid #f1f1f1;
+  border-radius: 18px;
+  padding: 15px;
+  transition: all 0.3s ease;
+}
+
+.price-box-modern:hover {
+  border-color: #ff0050;
+  background: #fff;
+}
+
+.price-value {
+  font-size: 1.6rem;
+  font-weight: 900;
+  color: #1a1a1a;
+  display: block;
+}
+
+.price-label {
+  font-size: 0.65rem;
+  color: #999;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Botones de Acción de Alto Impacto */
+.btn-modern {
+  border-radius: 15px;
+  padding: 12px;
+  font-weight: 800;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.btn-video-outline {
+  background: #fff;
+  color: #1a1a1a;
+  border: 2px solid #1a1a1a !important;
+}
+
+.btn-video-outline:hover {
+  background: #1a1a1a;
+  color: #fff;
+}
+
+.btn-whatsapp-solid {
+  background: #25d366;
+  color: #fff;
+  box-shadow: 0 6px 12px rgba(37, 211, 102, 0.2);
+}
+
+.btn-whatsapp-solid:hover {
+  background: #20bd5a;
+  transform: scale(1.03);
+}
+
+/* Efecto de elevación para las tarjetas */
+.card-premium {
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  border-radius: 25px !important;
+  overflow: visible; /* Para que el badge de llamar sobresalga */
+}
+
+.card-premium:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(255, 0, 80, 0.15) !important;
+}
+
+/* Badge de LLAMAR con pulso sutil */
+.badge-call {
+  background: linear-gradient(45deg, #ff0050, #ff0081);
+  font-weight: 800;
+  letter-spacing: 1px;
+  border-radius: 50px !important;
+  padding: 8px 20px !important;
+  box-shadow: 0 4px 15px rgba(255, 0, 80, 0.4);
+}
+
+/* Contenedor de precios estilo neumorfismo */
+.price-container {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 15px;
+  border: 1px solid #f0f0f0;
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.02);
+}
+
+.price-value {
+  font-size: 1.6rem;
+  line-height: 1;
+  color: #007bff;
+}
+
+/* Botones redondeados modernos */
+.btn-modern {
+  border-radius: 15px !important;
+  padding: 10px 15px !important;
+  font-size: 0.85rem !important;
+  letter-spacing: 0.5px;
+}
+
+/* Añadir esto a video.css */
+.card-premium:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(255, 0, 80, 0.12) !important; /* Sombra más fuerte y con un toque de color al pasar el ratón */
+}
+
+/* Marco resaltado de alto impacto */
+.card-premium-highlight {
+  border: 1px solid #e0e0e0 !important;
+  border-radius: 30px !important;
+  background: #ffffff !important;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1) !important; /* Sombra profunda */
+  transition: transform 0.3s ease;
+}
+
+.card-premium-highlight:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 45px rgba(255, 0, 80, 0.15) !important;
+}
+
+/* Botón estilo YouTube */
+.btn-youtube {
+  background-color: #ff0000 !important; /* Rojo YouTube */
+  color: white !important;
+  border: none !important;
+  border-radius: 15px !important;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.btn-youtube:hover {
+  background-color: #cc0000 !important;
+  box-shadow: 0 4px 12px rgba(255, 0, 0, 0.3);
+}
+
+/* Marco resaltado de alto impacto */
+    .card-destacado-premium {
+        border: 1px solid #eeeeee !important;
+        border-radius: 35px !important;
+        background: #ffffff !important;
+        box-shadow: 0 20px 40px rgba(0,0,0,0.08) !important;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .card-destacado-premium:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 30px 60px rgba(0,0,0,0.12) !important;
+    }
+
+    /* Botón Oficial de YouTube */
+    .btn-yt-red {
+        background-color: #FF0000 !important;
+        color: #ffffff !important;
+        border: none !important;
+        border-radius: 15px !important;
+        font-weight: 800;
+        text-transform: uppercase;
+        font-size: 0.85rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none !important;
+    }
+
+    .btn-yt-red:hover {
+        background-color: #cc0000 !important;
+        color: #ffffff !important;
+        box-shadow: 0 4px 15px rgba(255, 0, 0, 0.3);
+    }

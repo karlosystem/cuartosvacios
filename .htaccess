@@ -1,0 +1,29 @@
+# 1. Habilitar CORS para fuentes (Soluciona el error de los iconos)
+<IfModule mod_headers.c>
+    <FilesMatch "\.(ttf|ttc|otf|eot|woff|woff2)$">
+        Header set Access-Control-Allow-Origin "*"
+    </FilesMatch>
+</IfModule>
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+
+    # 2. Forzar HTTPS y NO-WWW (Consistencia de dominio)
+    # Si alguien entra con www, lo manda a la versión sin www
+    RewriteCond %{HTTP_HOST} ^www\.cuartosvacios\.com [NC]
+    RewriteRule ^(.*)$ https://cuartosvacios.com/$1 [L,R=301]
+
+    # 3. Forzar actualización a solicitudes seguras (CSP)
+    RewriteCond %{HTTP_HOST} ^cuartosvacios\.com$ [NC]
+    RewriteRule .* - [E=UPGRADE]
+    <IfModule mod_headers.c>
+        Header always set Content-Security-Policy "upgrade-insecure-requests;" env=UPGRADE
+    </IfModule>
+
+    # 4. Reglas estándar para index.php (Rutas amigables)
+    RewriteRule ^index\.php$ - [L]
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule . /index.php [L]
+</IfModule>

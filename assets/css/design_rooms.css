@@ -1,0 +1,840 @@
+/* ==========================================
+   NUEVO DISEÑO - MAQUETA ACTUALIZADA
+   ========================================== */
+
+.card-cuarto-modern {
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    border: 1px solid #f0f0f0;
+}
+
+.card-cuarto-modern:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+}
+
+/* Badges Flotantes Superiores */
+.badge-top-left {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    z-index: 10;
+}
+
+.badge-top-right {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    z-index: 10;
+}
+
+.badge-top {
+    display: inline-flex;
+    align-items: center;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 10px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+.badge-top i {
+    margin-right: 4px;
+    font-size: 9px;
+}
+
+.btn-favorito-circle {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.95);
+    border: 1px solid #e0e0e0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.btn-favorito-circle:hover {
+    background: #fff0f3;
+    border-color: #ff4757;
+    transform: scale(1.1);
+}
+
+.btn-favorito-circle i {
+    color: #ff4757;
+    font-size: 14px;
+}
+
+/* Icono de Casa Central */
+.icon-casa-container {
+    text-align: center;
+    padding: 45px 20px 20px;
+}
+
+.icon-casa-circle {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    flex-shrink: 0;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.codigo-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.codigo-cuarto-wrapper {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.card-header-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 45px 20px 15px;
+    text-align: left;
+}
+
+.codigo-cuarto {
+    font-size: 28px;
+    font-weight: 800;
+    margin: 0;
+    letter-spacing: 1px;
+    line-height: 1;
+}
+
+.codigo-label {
+    font-size: 11px;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.btn-ver-mapa-modern {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    margin-top: 5px;
+    transition: all 0.2s;
+}
+
+.btn-ver-mapa-mini {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    margin-top: 8px;
+    transition: all 0.2s;
+}
+
+.btn-ver-mapa-modern:hover {
+    transform: scale(1.05);
+}
+
+.btn-ver-mapa-mini:hover {
+    transform: scale(1.05);
+}
+
+/* Ubicación */
+.card-ubicacion-mini {
+    padding: 0 20px;
+    margin-bottom: 15px;
+}
+
+.ubicacion-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    margin-bottom: 6px;
+    font-size: 12px;
+}
+
+.ubicacion-item i {
+    margin-top: 2px;
+    font-size: 13px;
+}
+
+.ubicacion-item.ciudad {
+    color: #666;
+}
+
+.ubicacion-item.direccion {
+    color: #333;
+    font-weight: 600;
+}
+
+/* Badges de Tipo y Período */
+.card-badges-row {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px 20px;
+    flex-wrap: wrap;
+}
+
+.badge-pill {
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Sección de Precios */
+.card-precios-box {
+    background: #f8f9fa;
+    border-top: 1px solid #e9ecef;
+    border-bottom: 1px solid #e9ecef;
+    padding: 15px 20px;
+    margin: 10px 0;
+}
+
+.precios-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.precio-item {
+    text-align: center;
+}
+
+.precio-icon {
+    font-size: 14px;
+    margin-bottom: 5px;
+    opacity: 0.7;
+}
+
+.precio-label {
+    font-size: 9px;
+    color: #888;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    margin-bottom: 4px;
+}
+
+.precio-valor {
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.precio-valor.sin-precio {
+    color: #ccc;
+    font-size: 16px;
+}
+
+/* Barra de Acciones Inferior */
+.card-acciones-bar {
+    display: flex;
+    margin-top: auto;
+    border-top: 1px solid #e9ecef;
+}
+
+
+.btn-accion-bar {
+    flex: 1;
+    padding: 12px 8px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-flex; /* Cambiado a inline-flex */
+    flex-direction: row; /* Horizontal: icono y texto lado a lado */
+    align-items: center; /* Centrado verticalmente */
+    justify-content: center; /* Centrado horizontalmente */
+    gap: 6px; /* Espacio entre icono y texto */
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.2s;
+    border: none;
+    cursor: pointer;
+}
+
+
+.btn-accion-bar:first-child {
+    border-bottom-left-radius: 16px;
+}
+
+.btn-accion-bar:last-child {
+    border-bottom-right-radius: 16px;
+}
+
+.btn-accion-bar i {
+    font-size: 14px; /* Un poco más pequeño para que queja bien */
+    display: inline-block;
+}
+
+.btn-accion-bar span {
+    display: inline-block;
+    white-space: nowrap; /* Evita que el texto se rompa */
+}
+
+.btn-accion-bar.disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+/* Atributos compactos */
+.card-atributos-compact {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px 15px;
+    flex-wrap: wrap;
+    border-top: 1px dashed #e9ecef;
+}
+
+.attr-icon-mini {
+    font-size: 16px;
+    opacity: 0.6;
+    transition: all 0.2s;
+}
+
+.attr-icon-mini:hover {
+    opacity: 1;
+    transform: scale(1.2);
+}
+
+/* ==========================================
+   ENCABEZADO DE LISTADO - FILA HORIZONTAL
+   ========================================== */
+.encabezado-listado {
+    padding: 40px 0 30px;
+    background: #ffffff;
+    margin-bottom: 30px;
+}
+
+.encabezado-contenedor {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* Sección izquierda: Título */
+.encabezado-titulo-seccion {
+    flex: 0 0 auto;
+    min-width: 280px;
+}
+
+.encabezado-titulo {
+    font-size: 32px;
+    font-weight: 800;
+    color: #1a1a1a;
+    margin-bottom: 8px;
+    line-height: 1.2;
+}
+
+.encabezado-titulo .emoji {
+    font-size: 28px;
+}
+
+.encabezado-titulo .texto-destacado {
+    color: #fdae5c; /* Color naranja de tu marca */
+}
+
+.encabezado-subtitulo {
+    font-size: 15px;
+    color: #666;
+    margin-bottom: 0;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+/* Sección derecha: Tarjetas de características */
+.features-grid {
+    display: flex;
+    align-items: stretch;
+    gap: 15px;
+    flex: 1;
+    flex-wrap: wrap;
+}
+
+.feature-card {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 15px 18px;
+    background: #ffffff;
+    border-radius: 12px;
+    border: 1px solid #e9ecef;
+    transition: all 0.3s ease;
+    flex: 1;
+    min-width: 220px;
+}
+
+.feature-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    border-color: #3d5afe;
+}
+
+.feature-icon {
+    width: 45px;
+    height: 45px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    flex-shrink: 0;
+}
+
+.feature-icon.seguro {
+    background: #e3f2fd;
+    color: #3d5afe;
+}
+
+.feature-icon.precios {
+    background: #e8f5e9;
+    color: #28a745;
+}
+
+.feature-icon.atencion {
+    background: #f3e5f5;
+    color: #9c27b0;
+}
+
+.feature-icon.calidad {
+    background: #fff3e0;
+    color: #ff9800;
+}
+
+.feature-content h4 {
+    font-size: 11px;
+    font-weight: 800;
+    color: #1a1a1a;
+    margin-bottom: 2px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    line-height: 1.2;
+}
+
+.feature-content p {
+    font-size: 11px;
+    color: #666;
+    margin: 0;
+    line-height: 1.3;
+}
+
+/* Responsive: En tablets y móviles se apilan */
+@media (max-width: 1199px) {
+    .encabezado-contenedor {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .encabezado-titulo-seccion {
+        margin-bottom: 20px;
+    }
+    
+    .features-grid {
+        width: 100%;
+    }
+}
+
+@media (max-width: 991px) {
+    .features-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+    
+    .feature-card {
+        min-width: auto;
+    }
+}
+
+@media (max-width: 576px) {
+    .encabezado-titulo {
+        font-size: 24px;
+    }
+    
+    .encabezado-subtitulo {
+        font-size: 13px;
+    }
+    
+    .features-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+    
+    .feature-card {
+        padding: 12px 15px;
+    }
+}
+
+/* ==========================================
+   BANNER CTA - WHATSAPP CONTACTO
+   ========================================== */
+.banner-cta-whatsapp {
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    overflow: hidden;
+    margin: 30px 0;
+    display: flex;
+    align-items: stretch;
+    min-height: 120px;
+}
+
+/* Sección Izquierda: Logo y Marca */
+.banner-cta-left {
+    background: #0a1628;
+    color: #ffffff;
+    padding: 25px 30px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    min-width: 280px;
+    position: relative;
+}
+
+.banner-cta-left::after {
+    content: '';
+    position: absolute;
+    right: -20px;
+    top: 0;
+    bottom: 0;
+    width: 40px;
+    background: #0a1628;
+    clip-path: polygon(0 0, 100% 0, 80% 100%, 0% 100%);
+}
+
+.banner-cta-crown {
+    font-size: 40px;
+    color: #fdae5c;
+    flex-shrink: 0;
+}
+
+.banner-cta-brand h3 {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0 0 4px;
+    color: #ffffff;
+}
+
+.banner-cta-brand p {
+    font-size: 12px;
+    color: rgba(255,255,255,0.7);
+    margin: 0;
+    line-height: 1.4;
+}
+
+/* Sección Central: Mensaje WhatsApp */
+.banner-cta-center {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    padding: 25px 30px;
+    gap: 20px;
+    background: #f8f9fa;
+}
+
+.banner-cta-whatsapp-icon {
+    position: relative;
+    flex-shrink: 0;
+}
+
+.banner-cta-whatsapp-icon .phone-mockup {
+    font-size: 50px;
+    color: #25d366;
+    position: relative;
+}
+
+.banner-cta-whatsapp-icon .whatsapp-badge {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    width: 24px;
+    height: 24px;
+    background: #25d366;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #fff;
+}
+
+.banner-cta-whatsapp-icon .whatsapp-badge i {
+    color: #fff;
+    font-size: 12px;
+}
+
+.banner-cta-message h4 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin: 0 0 5px;
+}
+
+.banner-cta-message h4 span {
+    color: #25d366;
+}
+
+.banner-cta-message p {
+    font-size: 13px;
+    color: #666;
+    margin: 0;
+}
+
+/* Sección Derecha: Botón CTA */
+.banner-cta-right {
+    padding: 20px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 250px;
+}
+
+.btn-cta-whatsapp {
+    background: #fdae5c;
+    background: linear-gradient(135deg, #fdae5c 0%, #fd8e5e 100%);
+    color: #ffffff;
+    border: none;
+    border-radius: 12px;
+    padding: 15px 30px;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(253, 174, 92, 0.4);
+    min-width: 200px;
+}
+
+.btn-cta-whatsapp:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(253, 174, 92, 0.5);
+    color: #ffffff;
+}
+
+.btn-cta-whatsapp .btn-cta-text {
+    font-size: 14px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-cta-whatsapp .btn-cta-text i {
+    font-size: 18px;
+}
+
+.btn-cta-whatsapp .btn-cta-subtext {
+    font-size: 10px;
+    color: rgba(255,255,255,0.9);
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.btn-cta-whatsapp .btn-cta-subtext i {
+    font-size: 10px;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+    .banner-cta-whatsapp {
+        flex-direction: column;
+    }
+    
+    .banner-cta-left {
+        min-width: auto;
+        justify-content: center;
+    }
+    
+    .banner-cta-left::after {
+        display: none;
+    }
+    
+    .banner-cta-center {
+        justify-content: center;
+        text-align: center;
+    }
+    
+    .banner-cta-right {
+        min-width: auto;
+        padding: 20px;
+    }
+    
+    .btn-cta-whatsapp {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 576px) {
+    .banner-cta-left {
+        padding: 20px;
+    }
+    
+    .banner-cta-crown {
+        font-size: 30px;
+    }
+    
+    .banner-cta-brand h3 {
+        font-size: 16px;
+    }
+    
+    .banner-cta-center {
+        padding: 20px;
+        flex-direction: column;
+    }
+    
+    .banner-cta-message h4 {
+        font-size: 16px;
+    }
+    
+    .banner-cta-whatsapp-icon .phone-mockup {
+        font-size: 40px;
+    }
+}
+
+/* Botón de favoritos con texto */
+.btn-favorito-circle {
+    width: auto;
+    min-width: 140px;
+    padding: 6px 12px;
+    border-radius: 20px;
+    background: rgba(255,255,255,0.95);
+    border: 1px solid #e0e0e0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.btn-favorito-circle:hover {
+    background: #fff0f3;
+    border-color: #ff4757;
+    transform: scale(1.05);
+}
+
+.btn-favorito-circle i {
+    color: #ff4757;
+    font-size: 14px;
+}
+
+.btn-favorito-text {
+    font-size: 10px;
+    font-weight: 600;
+    color: #ff4757;
+    white-space: nowrap;
+}
+
+/* Estado activo (ya es favorito) */
+.btn-favorito-circle.active {
+    background: #ff4757;
+    border-color: #ff4757;
+}
+
+.btn-favorito-circle.active i {
+    color: #fff;
+}
+
+.btn-favorito-circle.active .btn-favorito-text {
+    color: #fff;
+}
+
+/* Animación de éxito */
+@keyframes favoriteAdded {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+.btn-favorito-circle.added {
+    animation: favoriteAdded 0.3s ease;
+}
+
+/* Notificaciones Toast */
+.toast-notificacion {
+    position: fixed;
+    top: 100px;
+    right: 20px;
+    background: #28a745;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 600;
+    font-size: 14px;
+    opacity: 0;
+    transform: translateX(400px);
+    transition: all 0.3s ease;
+}
+
+.toast-notificacion.error {
+    background: #dc3545;
+}
+
+.toast-notificacion.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.toast-notificacion i {
+    font-size: 18px;
+}
+
+/* Responsive para móviles */
+@media (max-width: 767px) {
+    .toast-notificacion {
+        top: auto;
+        bottom: 100px;
+        right: 10px;
+        left: 10px;
+        text-align: center;
+        justify-content: center;
+    }
+}
