@@ -88,9 +88,9 @@ define('PAGINATION_PER_PAGE_LIMIT', 2);
 define('PAGINATION_PER_PAGE_ADMIN', 30);
 
 define('CURRENCY', "$");
-define('API_USERNAME', "manoj123");
-define('API_EMAIL', "vermamanoj343@gmail.com");
-define('API_KEY', "d5f111e77c683150cb80860e197a66d0");
+define('API_USERNAME', "");
+define('API_EMAIL', "");
+define('API_KEY', "");
 define('API_PASSWORD', "admin123");
-define('API_LINK', "http://api.templatecloud.com/sandbox"); //https://api.templatecloud.com/v1/
-define('API_DEV_LINK', "https://uk.editor.w3p.com/");//https://dev.editor.w3p.com
+define('API_LINK', ""); //https://api.templatecloud.com/v1/
+define('API_DEV_LINK', "");//https://dev.editor.w3p.com
